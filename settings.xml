@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<settings>
+    <cameraID>0</cameraID>
+    <appPathAI name="/Users/tomschofield/Dropbox/readingreading/install_v1/screen1_ai/screen1_ai.app"></appPathAI>
+    <appPathAnalysis name="/Users/tomschofield/Dropbox/readingreading/install_v1/screen3_analysis/screen3_analysis.app"></appPathAnalysis>
+    <dataPathReader name="/Users/tomschofield/Dropbox/readingreading/install_v1/screen2_reader/"></dataPathReader>
+    <hocrPath name="/Users/tomschofield/Dropbox/readingreading/install_v1/screen2_reader/hocrOutput.hocr"></hocrPath>
+    <scriptsPath name="/Users/tomschofield/Dropbox/readingreading/install_v1/scripts/"></scriptsPath>
+    <rnnPath name="~/torch/torch-rnn/runinstallation.sh"></rnnPath>
+    <rootPath name="/Users/tomschofield/Dropbox/readingreading/"></rootPath>
+    <screenWidth>1200</screenWidth>
+    <miningPort>1440</miningPort>
+    <analysisPort>2222</analysisPort>
+    <aiPort>3333</aiPort>
+    <backgroundColour r="18" g="250" b="201"></backgroundColour>
+    <aiIp name="127.0.0.1"></aiIp>
+    <analysisIp name="127.0.0.1"></analysisIp>
+    <screenHeight>1920</screenHeight>
+    <fontSize>72</fontSize>
+    <aiFontSize>24</aiFontSize>
+    <titleFontSize>72</titleFontSize>
+    <bodyFontSize>32</bodyFontSize>
+    <titleWpm>1010</titleWpm>
+    <useCamera>0</useCamera>
+    <wpm>200</wpm>
+    <speedReaderFontName name="../fonts/Torquera.ttf"></speedReaderFontName>
+    <fontName name="../fonts/SourceSansPro-Light-48.vlw"></fontName>
+
+    <bodyFontName name="../fonts/SourceSansPro-Light-36.vlw"></bodyFontName>
+    <messagesFontName name="../fonts/SourceSansPro-Light-72.vlw"></messagesFontName>
+
+</settings>
