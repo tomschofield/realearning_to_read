@@ -38,7 +38,7 @@ void setup() {
   // colorMode(HSB, 360, 100, 100);
 
   loadSettings();
-
+   makeNewText();
   oscP5 = new OscP5(this, aiPort);
   manager = new Manager();
 }
@@ -49,7 +49,7 @@ void draw() {
   background(backgroundColour);
   // colorMode(RGB);
   fill(0);
-
+ 
   manager.update();
   manager.display();
 }

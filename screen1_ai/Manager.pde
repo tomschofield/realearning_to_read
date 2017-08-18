@@ -10,7 +10,6 @@ class Manager {
   float currentHue;
   int direction = 1;
   Manager() {
-    
   }
   void update() {
     if (inBookPresentMode) {
@@ -22,6 +21,7 @@ class Manager {
     } else if (inBookStartedAnalysisMode) {
       drawCountDown("BOOK PROCESSED IN: ", 150);
     } else if (inBookPresentMode) {
+      throb(color(0), 1);
       drawAIText();
     } else if (inAmbientMode) {
       drawAmbient();
@@ -29,26 +29,26 @@ class Manager {
   }
   void throb(color to, float rate) {
     float fromHue = hue(backgroundColour);
-     colorMode(RGB);
+    colorMode(RGB);
     float fromSaturation = saturation(backgroundColour);
     float fromBrightness = brightness(backgroundColour);
-    
+
     float toHue = brightness(to);
     pushStyle();
     colorMode(HSB);
-    color currentColour = color(fromHue,fromSaturation, currentHue);
-    
+    color currentColour = color(fromHue, fromSaturation, currentHue);
+
     background(currentColour);
     currentHue+=(direction*rate);
-    
-    if(currentHue>= max(fromBrightness,toHue) || currentHue<= min(fromBrightness,toHue) ){
+
+    if (currentHue>= max(fromBrightness, toHue) || currentHue<= min(fromBrightness, toHue) ) {
       direction*=-1;
     }
-    println("throbbing",currentHue);
+    println("throbbing", currentHue);
     popStyle();
   }
   void drawAmbient() {
-    //throb(color(0),1);
+    throb(color(0), 10);
     String amb = "AMBIENT SCREEN";
     text(amb, (width/2)-(0.5*textWidth(amb)), height/2);
   }
